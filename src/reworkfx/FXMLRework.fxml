@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane_Main" fx:id="AnchorPane_Main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reworkfx.FXMLReworkController">
+   <children>
+      <SplitPane dividerPositions="0.17468944099378883" layoutX="5.0" layoutY="100.0" prefHeight="600.0" prefWidth="1250.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+        <items>
+          <AnchorPane id="Pane_TreeView" fx:id="Pane_TreeView" maxWidth="300.0" minHeight="0.0" minWidth="215.0" prefHeight="600.0" prefWidth="215.0">
+               <children>
+                  <StackPane id="StackPane_TreeView" fx:id="StackPane_TreeView" maxWidth="300.0" minWidth="215.0" prefHeight="600.0" prefWidth="215.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane id="anchorpane_TableView" fx:id="anchorpane_TableView" minHeight="0.0" minWidth="0.0" prefHeight="600.0" prefWidth="1010.0">
+               <children>
+                  <Pane id="Pane_MasterDataView" fx:id="Pane_MasterDataView" prefHeight="928.0" prefWidth="1557.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView id="TableView_Masterdata" fx:id="TableView_Masterdata" prefHeight="604.0" prefWidth="1200.0" />
+                        <ComboBox id="ComboBox_MasterData" fx:id="ComboBox_MasterData" layoutX="50.0" layoutY="650.0" prefWidth="150.0" promptText="Tábla" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                     </children>
+                  </Pane>
+                  <Pane id="Pane_TableView" fx:id="Pane_TableView" prefHeight="600.0" prefWidth="1000.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <TableView id="TableView_ReworkData" fx:id="TableView_ReworkData" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="598.0" prefWidth="1000.0" />
+                        <Pane id="Pane_ListViewOptions" fx:id="Pane_ListViewOptions" layoutX="10.0" layoutY="605.0" prefHeight="50.0" prefWidth="650.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffff;">
+                           <children>
+                              <Label layoutX="110.0" layoutY="17.0" text="Adat:" />
+                              <Label layoutX="300.0" layoutY="17.0" text="Érték:" />
+                              <Label layoutX="14.0" layoutY="16.0" text="Lista szűrése">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox id="ComboBox_Data" fx:id="ComboBox_Data" editable="true" layoutX="150.0" layoutY="13.0" prefWidth="130.0" promptText="Mi alapján?" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" visibleRowCount="5" />
+                              <ComboBox id="ComboBox_Value" fx:id="ComboBox_Value" editable="true" layoutX="340.0" layoutY="13.0" prefWidth="150.0" promptText="Mit keres?" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                              <CheckBox id="CheckBox_ListAll" fx:id="CheckBox_ListAll" layoutX="523.0" layoutY="17.0" mnemonicParsing="false" selected="true" text="Összes mutatása" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="680.0" layoutY="605.0" prefHeight="50.0" prefWidth="320.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffff;">
+                           <children>
+                              <Label layoutX="20.0" layoutY="17.0" text="Rekordok száma: " />
+                              <TextField id="TextField_TableView_CountOfRecords" fx:id="TextField_TableView_CountOfRecords" editable="false" focusTraversable="false" layoutX="150.0" layoutY="13.0" style="-fx-background-color: #ffffff; -fx-border-color: #ccffbb;" />
+                           </children>
+                        </Pane>
+                        <TitledPane id="TitledPane_QuickView" fx:id="TitledPane_QuickView" layoutX="1010.0" prefHeight="630.0" prefWidth="360.0" text="Gyors megtekintés" textFill="#3d396b">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;">
+                                 <children>
+                                    <ImageView id="ImageView_QuickView" fx:id="ImageView_QuickView" fitHeight="300.0" fitWidth="300.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+                                    <ToolBar layoutX="310.0" layoutY="5.0" orientation="VERTICAL" prefHeight="100.0" prefWidth="40.0">
+                                      <items>
+                                          <Button id="Button_EnlargeImage" fx:id="Button_EnlargeImage" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;">
+                                             <effect>
+                                                <ImageInput>
+                                                   <source>
+                                                      <Image url="file:/C:/Users/te332168/Documents/NetBeansProjects/ReworkFX/src/img/zoom.jpg" />
+                                                   </source>
+                                                </ImageInput>
+                                             </effect>
+                                          </Button>
+                                          <Separator prefWidth="30.0" />
+                                        <Button id="Button_NewReworkFromTemp" fx:id="Button_NewReworkFromTemp" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0">
+                                             <effect>
+                                                <ImageInput>
+                                                   <source>
+                                                      <Image url="file:/C:/Users/te332168/Documents/NetBeansProjects/ReworkFX/src/img/newtemp.jpg" />
+                                                   </source>
+                                                </ImageInput>
+                                             </effect>
+                                          </Button>
+                                      </items>
+                                    </ToolBar>
+                                    <Label id="Label_ReworkID" fx:id="Label_ReworkID" layoutX="20.0" layoutY="320.0" text="Megrendelés azonosító:" />
+                                    <TextField id="TextField_ReworkID" fx:id="TextField_ReworkID" editable="false" layoutX="180.0" layoutY="315.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                                    <Label id="Label_PartID" fx:id="Label_PartID" layoutX="20.0" layoutY="360.0" text="Rajzszám:" />
+                                    <TextField id="TextField_PartID" fx:id="TextField_PartID" editable="false" layoutX="180.0" layoutY="355.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                                    <Label id="Label_DefectDesc" fx:id="Label_DefectDesc" layoutX="20.0" layoutY="480.0" text="Hibaleírás:" />
+                                    <Label id="Label_LocationID" fx:id="Label_LocationID" layoutX="20.0" layoutY="520.0" text="Utómunka helye:" />
+                                    <TextField id="TextField_LocationID" fx:id="TextField_LocationID" editable="false" layoutX="180.0" layoutY="515.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                                    <TextField id="TextField_DefectDesc" fx:id="TextField_DefectDesc" editable="false" layoutX="180.0" layoutY="475.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                                    <Label id="Label_PartName" fx:id="Label_PartName" layoutX="20.0" layoutY="400.0" text="Megnevezés:" />
+                                    <TextField id="TextField_PartName" fx:id="TextField_PartName" editable="false" layoutX="180.0" layoutY="395.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                                    <Label id="Label_AbNo" fx:id="Label_PartName1" layoutX="20.0" layoutY="440.0" text="Batch:" />
+                                    <TextField id="TextField_ABNo" fx:id="TextField_ABNo" editable="false" layoutX="180.0" layoutY="435.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </TitledPane>
+                     </children>
+                  </Pane>
+                  <Pane id="Pane_NewRework" fx:id="Pane_NewRework" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <GridPane layoutX="17.0" layoutY="436.0" prefHeight="471.0" prefWidth="869.0" style="-fx-border-color: #aaafff;">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="216.0" minHeight="1.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="440.0" minHeight="10.0" prefHeight="433.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button id="Button_UploadDefectPhoto1" fx:id="Button_UploadDefectPhoto1" defaultButton="true" mnemonicParsing="false" onAction="#uploadDefectPhoto1" text="Hibakép +" GridPane.valignment="TOP">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <ImageView id="ImageView_DefectPhoto1" fx:id="ImageView_DefectPhoto1" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <ImageView id="ImageView_DefectPhoto2" fx:id="ImageView_DefectPhoto2" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                              <Button id="Button_UploadDefectPhoto2" fx:id="Button_UploadDefectPhoto2" defaultButton="true" layoutX="10.0" layoutY="116.0" mnemonicParsing="false" onAction="#uploadDefectPhoto2" text="Hibakép +" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                                 <GridPane.margin>
+                                    <Insets left="5.0" top="5.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Label text="Kattints a képre a nagyításhoz" GridPane.halignment="CENTER" />
+                              <Label layoutX="214.0" layoutY="21.0" text="Kattints a képre a nagyításhoz" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                           </children>
+                        </GridPane>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="5.0" prefHeight="20.0" prefWidth="1015.0" text="Új utómunka megrendelés rögzítése" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="60.0" text="Rework PO:" />
+                        <TextField id="TextField_NewRework_RPO" fx:id="TextField_NewRework_RPO" layoutX="80.0" layoutY="55.0" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                        <Label layoutX="210.0" layoutY="60.0" text="SAP reklamáció:" />
+                        <TextField id="TextField_NewRework_ClaimNo" fx:id="TextField_NewRework_ClaimNo" layoutX="300.0" layoutY="55.0" prefHeight="25.0" prefWidth="103.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                        <Group id="Group_Where" fx:id="Group_Where" layoutX="570.0" layoutY="52.0">
+                           <children>
+                              <RadioButton id="RadioButton_Outside" fx:id="RadioButton_Outside" mnemonicParsing="false" selected="true" text="Vállalkozó telephelye">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="ToggleGroup_Where" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton id="RadioButton_Inside" fx:id="RadioButton_Inside" layoutY="20.0" mnemonicParsing="false" text="Megrendelő telephelye" toggleGroup="$ToggleGroup_Where" />
+                           </children>
+                        </Group>
+                        <Label layoutX="735.0" layoutY="60.0" text="Óradíj:" />
+                        <TextField id="TextField_NewRework_CostPerHour" fx:id="TextField_NewRework_CostPerHour" editable="false" focusTraversable="false" layoutX="782.0" layoutY="55.0" prefHeight="27.0" prefWidth="80.0" style="-fx-background-color: #ffffff; -fx-border-color: #cccbba;" />
+                        <Label layoutX="874.0" layoutY="60.0" text="Ft." />
+                        <Label layoutX="15.0" layoutY="115.0" text="Rajzszám:" />
+                        <ComboBox id="CB_NewRework_PartNo" fx:id="CB_NewRework_PartNo" editable="true" layoutX="73.0" layoutY="110.0" prefWidth="120.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                        <Label layoutX="217.0" layoutY="115.0" text="Megnevezés:" />
+                        <TextField id="TextField_NewRework_PartName" fx:id="TextField_NewRework_PartName" editable="false" focusTraversable="false" layoutX="292.0" layoutY="110.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #cccbba;" />
+                        <Label layoutX="515.0" layoutY="115.0" text="Batch:" />
+                        <TextField id="TextField_NewRework_ChargeNo" fx:id="TextField_NewRework_Batch" layoutX="550.0" layoutY="110.0" prefHeight="27.0" prefWidth="103.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                        <Label layoutX="680.0" layoutY="115.0" text="Mennyiség:" />
+                        <TextField id="TextField_NewRework_Qty" fx:id="TextField_NewRework_Qty" layoutX="750.0" layoutY="110.0" prefHeight="27.0" prefWidth="103.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                        <Label layoutX="860.0" layoutY="115.0" text="db" />
+                        <Label layoutX="15.0" layoutY="170.0" text="Darabidő:" />
+                        <TextField id="TextField_NewRework_PcsPerSec" fx:id="TextField_NewRework_PcsPerSec" layoutX="73.0" layoutY="165.0" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                        <Label layoutX="159.0" layoutY="170.0" text="másodperc = összesen " />
+                        <TextField id="TextField_NewRework_HourPerQty" fx:id="TextField_NewRework_HourPerQty" editable="false" focusTraversable="false" layoutX="290.0" layoutY="165.0" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: #ffffff; -fx-border-color: #cccbba;" />
+                        <Label layoutX="380.0" layoutY="170.0" text="munkaóra" />
+                        <Label layoutX="450.0" layoutY="60.0" text="Utómunka helyszíne:" />
+                        <Label layoutX="511.0" layoutY="190.0" text="Számított költség:" />
+                        <TextField id="TextField_NewRework_CalcCostHuf" fx:id="TextField_NewRework_CalcCostHuf" editable="false" focusTraversable="false" layoutX="616.0" layoutY="165.0" prefHeight="27.0" prefWidth="128.0" style="-fx-background-color: #ffffff; -fx-border-color: #cccbba;" />
+                        <Label layoutX="758.0" layoutY="170.0" text="HUF  " />
+                        <TextField id="TextField_NewRework_CalcCostEur" fx:id="TextField_NewRework_CalcCostEur" editable="false" focusTraversable="false" layoutX="616.0" layoutY="200.0" prefHeight="27.0" prefWidth="95.0" style="-fx-background-color: #ffffff; -fx-border-color: #cccbba;" />
+                        <Label layoutX="724.0" layoutY="205.0" text="EUR" />
+                        <Label layoutX="15.0" layoutY="215.0" text="Darabár:" />
+                        <TextField id="TextField_NewRework_PriceUnitHUF" fx:id="TextField_NewRework_PriceUnitHUF" editable="false" focusTraversable="false" layoutX="73.0" layoutY="209.0" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: #ffffff; -fx-border-color: #cccbba;" />
+                        <Label layoutX="159.0" layoutY="214.0" text="HUF  " />
+                        <TextField id="TextField_NewRework_PriceUnitEUR" fx:id="TextField_NewRework_PriceUnitEUR" editable="false" focusTraversable="false" layoutX="193.0" layoutY="209.0" prefHeight="27.0" prefWidth="77.0" style="-fx-background-color: #ffffff; -fx-border-color: #cccbba;" />
+                        <Label layoutX="283.0" layoutY="214.0" text="EUR" />
+                        <Label layoutX="15.0" layoutY="255.0" text="Hiba megnevezése:" />
+                        <TextField id="TextField_NewRework_Defect" fx:id="TextField_NewRework_Defect" layoutX="135.0" layoutY="250.0" prefHeight="27.0" prefWidth="300.0" promptText="Pl. foltos felület, enguszmaradvány, anyaghiány, fröccshiba" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                        <Label layoutX="477.0" layoutY="255.0" text="Utómunka rövid leírása:" />
+                        <TextArea id="TextArea_NewRework_Instructions" fx:id="TextArea_NewRework_Instructions" layoutX="612.0" layoutY="250.0" prefHeight="63.0" prefWidth="273.0" promptText="Pl. szemrevételes válogatás, méréses ellenőrzés, átcsomagolás, stb." style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                        <Label layoutX="15.0" layoutY="300.0" text="Szükséges eszközök:" />
+                        <TextField id="TextField_NewRework_Tools" fx:id="TextField_NewRework_Tools" layoutX="135.0" layoutY="295.0" prefHeight="27.0" prefWidth="300.0" promptText="Pl. nagyítós lámpa, sorjázókés, mérőcsap, sablon" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                        <Label layoutX="14.0" layoutY="365.0" text="Megrendelés dátuma:" />
+                        <DatePicker id="DatePicker_NewRework_Today" fx:id="DatePicker_NewRework_Today" layoutX="144.0" layoutY="360.0" prefHeight="27.0" prefWidth="133.0" showWeekNumbers="true" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                        <Label layoutX="310.0" layoutY="365.0" text="Határidő:" />
+                        <DatePicker id="DatePicker_NewRework_Deadline" fx:id="DatePicker_NewRework_Deadline" layoutX="370.0" layoutY="360.0" prefHeight="27.0" prefWidth="133.0" showWeekNumbers="true" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                        <Label layoutX="540.0" layoutY="365.0" prefHeight="17.0" prefWidth="115.0" text="Teljesítési időkeret:" />
+                        <TextField id="TextField_NewRework_MaxWorkDays" fx:id="TextField_NewRework_MaxWorkDays" editable="false" focusTraversable="false" layoutX="650.0" layoutY="360.0" prefHeight="27.0" prefWidth="51.0" promptText="0" style="-fx-background-color: #ffffff; -fx-border-color: #cccbba;" />
+                        <Label layoutX="710.0" layoutY="365.0" prefHeight="17.0" prefWidth="73.0" text="munkanap" />
+                        <CheckBox id="CheckBox_EnablePartDelivery" fx:id="CheckBox_EnablePartDelivery" layoutX="915.0" layoutY="365.0" mnemonicParsing="false" text="Rész-szállítás lehetséges" />
+                        <TitledPane id="TitledPane_EnablePartDelivery" fx:id="TitledPane_EnablePartDelivery" disable="true" layoutX="916.0" layoutY="400.0" prefWidth="203.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" text="Résszállítás adatok">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="170.0" prefWidth="205.0" style="-fx-background-color: #ffffff;">
+                                 <children>
+                                    <TextField layoutX="2.0" layoutY="20.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffaa;" />
+                                    <Label alignment="CENTER" prefWidth="99.0" text="Dátum" textAlignment="CENTER" />
+                                    <Label alignment="CENTER" layoutX="99.0" prefHeight="17.0" prefWidth="85.0" text="Darabszám" textAlignment="CENTER" />
+                                    <TextField layoutX="102.0" layoutY="20.0" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffaa;" />
+                                    <TextField layoutX="102.0" layoutY="48.0" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffaa;" />
+                                    <TextField layoutX="2.0" layoutY="48.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffaa;" />
+                                    <TextField layoutX="102.0" layoutY="76.0" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffaa;" />
+                                    <TextField layoutX="2.0" layoutY="76.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffaa;" />
+                                    <TextField layoutX="102.0" layoutY="104.0" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffaa;" />
+                                    <TextField layoutX="2.0" layoutY="104.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffaa;" />
+                                    <TextField layoutX="102.0" layoutY="132.0" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffaa;" />
+                                    <TextField layoutX="2.0" layoutY="132.0" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffaa;" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                        <CheckBox id="CheckBox_EnableNotes" fx:id="CheckBox_EnableNotes" layoutX="915.0" layoutY="631.0" mnemonicParsing="false" text="Megjegyzések" />
+                        <TextArea id="TextArea_Notes" fx:id="TextArea_Notes" disable="true" layoutX="916.0" layoutY="664.0" prefHeight="63.0" prefWidth="273.0" promptText="Egyéb megjegyzések az utómunkához" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+                        <Button id="Button_Refresh" fx:id="Button_Refresh" layoutX="1257.0" layoutY="25.0" mnemonicParsing="false" onAction="#newReworkFunctions" text="Mezők frissítése" />
+                        <Button id="Button_RecordNewRework" fx:id="Button_RecordNewRework" layoutX="916.0" layoutY="769.0" mnemonicParsing="false" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" text="Megrendelés rögzítése" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Label id="Label_DateTime" fx:id="Label_DateTime" layoutX="1675.0" layoutY="20.0" prefHeight="22.0" prefWidth="191.0" style="-fx-background-color: ;" text="  Date  " textFill="#474f6f" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Fájl">
+            <items>
+              <MenuItem id="MenuItem_Exit" fx:id="MenuItem_Exit" mnemonicParsing="false" onAction="#exitTheProgram" text="Kilépés" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Törzsadatok">
+               <items>
+                  <Menu mnemonicParsing="false" text="Létrehozás">
+                    <items>
+                      <MenuItem id="MenuItem_NewPartNo" fx:id="MenuItem_NewPartNo" mnemonicParsing="false" text="Új rajzszám" />
+                        <MenuItem id="MenuItem_NewProdArea" fx:id="MenuItem_NewProdArea" mnemonicParsing="false" text="Új gyártóterület" />
+                        <MenuItem id="MenuItem_NewMaster" fx:id="MenuItem_NewMaster" mnemonicParsing="false" text="Új mester" />
+                        <MenuItem id="MenuItem_NewDispo" fx:id="MenuItem_NewDispo" mnemonicParsing="false" text="Új diszponens" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Módosítás">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Mester módosítása" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Törzsadatok megtekintése">
+                    <items>
+                      <MenuItem id="MenuItem_ViewMasterData" fx:id="MenuItem_ViewMasterData" mnemonicParsing="false" text="Táblák" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Törzsadatok törlése">
+                     <items>
+                        <MenuItem id="MenuItem_DeleteMasterTables" fx:id="MenuItem_DeleteMasterTables" mnemonicParsing="false" text="Táblák törlése" />
+                     </items>
+                  </Menu>
+               </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Információk">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showSystemInfo" text="Rendszerinformációk" />
+                  <MenuItem mnemonicParsing="false" onAction="#showProgInfo" text="Program információk" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Felhasználók kezelése">
+              <items>
+                <MenuItem id="mnuItem_NewUser" fx:id="mnuItem_NewUser" mnemonicParsing="false" text="Új felhasználó" />
+                  <MenuItem id="mnuItem_BrowseUsers" fx:id="mnuItem_BrowseUsers" mnemonicParsing="false" text="Felhasználók listája" />
+                  <MenuItem id="mnuItem_DeleteUser" fx:id="mnuItem_DeleteUser" mnemonicParsing="false" text="Felhasználó törlése" />
+                  <MenuItem id="mnuItemDeleteUsersTable" fx:id="mnuItemDeleteUsersTable" mnemonicParsing="false" text="Összes felhasználó törlése!" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <ToolBar layoutY="25.0" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" visible="false">
+        <items>
+          <Button id="Button_NewPartNo" fx:id="Button_NewPartNo" alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" text="+" textFill="#1b2272">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+        </items>
+      </ToolBar>
+      <Pane id="Pane_AddNewPartNo" fx:id="Pane_AddNewPartNo" layoutX="300.0" layoutY="250.0" prefHeight="260.0" prefWidth="635.0" visible="false">
+         <children>
+            <Label layoutX="15.0" layoutY="42.0" text="Rajzszám:" />
+            <TextField id="TextField_NewPart_DrawingNo" fx:id="TextField_NewPart_DrawingNo" layoutX="73.0" layoutY="38.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="245.0" layoutY="43.0" text="Megnevezés:" />
+            <TextField id="TextField_NewPart_MatDesc" fx:id="TextField_NewPart_MatDesc" layoutX="320.0" layoutY="38.0" prefWidth="300.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="15.0" layoutY="88.0" text="Gyártóterület:" />
+            <ComboBox id="ComboBox_NewPart_ProdArea" fx:id="ComboBox_NewPart_ProdArea" layoutX="95.0" layoutY="84.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="470.0" layoutY="88.0" text="Költséghely:" />
+            <TextField id="TextField_NewPart_CostArea" fx:id="TextField_NewPart_CostArea" editable="false" layoutX="540.0" layoutY="84.0" prefWidth="80.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffbb;" />
+            <Label layoutX="15.0" layoutY="134.0" text="Mester:" />
+            <TextField id="TextField_NewPart_MasterName" fx:id="TextField_NewPart_MasterName" editable="false" layoutX="64.0" layoutY="130.0" prefWidth="160.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffbb;" />
+            <Label layoutX="276.0" layoutY="134.0" text="Diszponens:" />
+            <ComboBox id="ComboBox_NewPart_DispoName" fx:id="ComboBox_NewPart_DispoName" layoutX="350.0" layoutY="130.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Button id="Button_SaveNewMaterial" fx:id="Button_SaveNewMaterial" layoutX="400.0" layoutY="210.0" mnemonicParsing="false" text="Mentés" />
+            <TextField id="TextField_NewPart_ProdName" fx:id="TextField_NewPart_ProdName" editable="false" layoutX="300.0" layoutY="84.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaffbb;" />
+            <Label layoutX="230.0" layoutY="88.0" text="Területnév:" />
+         </children>
+      </Pane>
+      <Pane id="Pane_AddNewMaster" fx:id="Pane_AddNewMaster" layoutX="310.0" layoutY="260.0" prefHeight="250.0" prefWidth="400.0" visible="false">
+         <children>
+            <Label layoutX="15.0" layoutY="42.0" text="Mester neve:" />
+            <TextField id="TextField_NewMaster_Name" fx:id="TextField_NewMaster_Name" layoutX="140.0" layoutY="38.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="15.0" layoutY="88.0" text="Mester email címe:" />
+            <TextField id="TextField_NewMaster_Email" fx:id="TextField_NewMaster_Email" layoutX="140.0" layoutY="83.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="15.0" layoutY="134.0" text="Mester telefonszáma:" />
+            <TextField id="TextField_NewMaster_Phone" fx:id="TextField_NewMaster_Phone" layoutX="140.0" layoutY="130.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Button id="Button_SaveNewProducer" fx:id="Button_SaveNewProducer" layoutX="40.0" layoutY="200.0" mnemonicParsing="false" text="Mentés" />
+         </children>
+      </Pane>
+      <Pane id="Pane_AddNewDispo" fx:id="Pane_AddNewDispo" layoutX="320.0" layoutY="270.0" prefHeight="250.0" prefWidth="500.0" visible="false">
+         <children>
+            <Label layoutX="15.0" layoutY="42.0" text="Diszponens neve:" />
+            <TextField id="TextField_NewDispo_Name" fx:id="TextField_NewDispo_Name" layoutX="160.0" layoutY="38.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="15.0" layoutY="88.0" text="Diszponens email címe:" />
+            <TextField id="TextField_NewDispo_Email" fx:id="TextField_NewDispo_Email" layoutX="160.0" layoutY="83.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="15.0" layoutY="134.0" text="Diszponens telefonszáma:" />
+            <TextField id="TextField_NewDispo_Phone" fx:id="TextField_NewDispo_Phone" layoutX="160.0" layoutY="130.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Button id="Button_SaveNewDispo" fx:id="Button_SaveNewDispo" layoutX="40.0" layoutY="200.0" mnemonicParsing="false" text="Mentés" />
+         </children>
+      </Pane>
+      <Pane id="Pane_AddNewProdArea" fx:id="Pane_AddNewProdArea" layoutX="330.0" layoutY="280.0" prefHeight="270.0" prefWidth="400.0" visible="false">
+         <children>
+            <Label layoutX="15.0" layoutY="42.0" text="Gyártóterület azonosító:" />
+            <TextField id="TextField_NewProdArea_Code" fx:id="TextField_NewProdArea_Code" layoutX="170.0" layoutY="38.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="15.0" layoutY="88.0" text="Gyártóterület megnevezése:" />
+            <TextField id="TextField_NewProdArea_Desc" fx:id="TextField_NewProdArea_Desc" layoutX="170.0" layoutY="83.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="15.0" layoutY="134.0" text="Költséghely:" />
+            <TextField id="TextField_NewProdArea_CostAreaId" fx:id="TextField_NewProdArea_CostAreaId" layoutX="170.0" layoutY="130.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="15.0" layoutY="180.0" text="Mester neve:" />
+            <ComboBox id="ComboBox_NewProdArea_Master" fx:id="ComboBox_NewProdArea_Master" layoutX="170.0" layoutY="176.0" prefWidth="150.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Button id="Button_SaveNewProdArea" fx:id="Button_SaveNewProdArea" layoutX="40.0" layoutY="220.0" mnemonicParsing="false" text="Mentés" />
+         </children>
+      </Pane>
+      <Pane id="Pane_AddNewUser" fx:id="Pane_AddNewUser" layoutX="320.0" layoutY="270.0" prefHeight="250.0" prefWidth="400.0" style="-fx-background-color: #696463; -fx-border-color: #aaafff;" visible="false">
+         <children>
+            <Label layoutX="15.0" layoutY="44.0" text="Azonosító:" textFill="#c4bebc" />
+            <TextField id="txtField_NewUser_ID" fx:id="txtField_NewUser_ID" layoutX="140.0" layoutY="40.0" prefWidth="100.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="15.0" layoutY="82.0" text="Felhasználónév:" textFill="#c4bebc" />
+            <TextField id="txtField_NewUser_Name" fx:id="txtField_NewUser_Name" layoutX="140.0" layoutY="78.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="15.0" layoutY="120.0" text="Email cím:" textFill="#c4bebc" />
+            <TextField id="txtField_NewUser_Email" fx:id="txtField_NewUser_Email" layoutX="140.0" layoutY="116.0" prefWidth="200.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Label layoutX="15.0" layoutY="158.0" text="Jelszó:" textFill="#c4bebc" />
+            <PasswordField id="pswField_NewUser_Password" fx:id="pswField_NewUser_Password" layoutX="140.0" layoutY="154.0" style="-fx-background-color: #ffffff; -fx-border-color: #aaafff;" />
+            <Button id="btnSaveNewUser" fx:id="btnSaveNewUser" layoutX="40.0" layoutY="200.0" mnemonicParsing="false" text="Mentés" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

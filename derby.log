@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Jun 24 13:32:34 CEST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.2 - (1629631): instance a816c00e-0172-e619-df81-00000dda7970 
+on database directory C:\Users\te332168\Documents\NetBeansProjects\ReworkFX\reworkDB with class loader sun.misc.Launcher$AppClassLoader@42a57993 
+Loaded from file:/C:/Users/te332168/Documents/NetBeansProjects/ReworkFX/dist/run973023914/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_111-b14
+user.dir=C:\Users\te332168\Documents\NetBeansProjects\ReworkFX
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
